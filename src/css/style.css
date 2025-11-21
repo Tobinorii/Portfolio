@@ -1,0 +1,161 @@
+:root {
+  --macaron: #F297A0;
+  --pink: #fff3f2; /*#F9D0CE*/
+  --matcha: #86BB79;
+
+  --apricot: #F3EBD8;
+  --macaron: #F297A0;
+  --choco: #1C130F;
+}
+
+.comic-relief-regular {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-relief-bold {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*----*/
+
+body {
+  margin: 0;
+  background-color: var(--pink);
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  font-family: "Oranienbaum", system-ui;
+}
+
+p {
+  font-family: "Comic Relief", system-ui;
+}
+
+/*----*/
+
+.header {
+  background-color: white;
+  padding: 10px 20px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header a {
+  color: var(--macaron);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header-right {
+  float: right;
+  display: flex;
+  margin-top: 3px;
+  gap: 25px;
+}
+
+/*----*/
+
+.coverart,
+.aboutpage,
+.portfoliopage {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coverart,
+.portfoliopage {
+  flex-direction: column;
+}
+
+.coverart {
+  margin-top: -10px;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+/*----*/
+
+.aboutpage {
+  gap: 30px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 10px 10px 10px;
+  
+  height: 200px;
+  width: 600px;
+}
+
+.about-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  width: 100%;
+}
+
+.about-btn,
+.other-btn {
+  font-family: "Oranienbaum", system-ui;
+  font-size: 18px;
+
+  background-color: white;
+  padding: 15px 30px 10px 30px;
+  border-radius: 10px 10px 0 0;
+  border: none;
+
+  cursor: pointer;
+}
+
+.profilepic img {
+  height: 300px;
+  width: auto;
+}
+
+/*----*/
+
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  height: 400px;
+  
+  text-align: center;
+}
+
+.card img {
+  width: 80%;
+  padding: 10px;
+}
+
+.card h3 {
+  margin: 0;
+}
