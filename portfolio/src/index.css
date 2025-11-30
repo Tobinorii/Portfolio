@@ -1,0 +1,48 @@
+:root {
+  --blue: #285EE6;
+  --blueline: #2056DD;
+  --bluehighlight: #80a4ff;
+  --bluelight: #b5cbff91;
+
+  --textshadow: #1a3c74;
+
+}
+
+.comic-relief-regular {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-relief-bold {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*----*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: var(--blue);
+  border-top: 3px solid var(--blueline);
+  box-shadow: inset 0px 3px 3px var(--bluelight);
+  height: 40px;
+  width: 100vw;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  font-family: "Oranienbaum", system-ui;
+}
+
+p {
+  font-family: "Comic Relief", system-ui;
+}

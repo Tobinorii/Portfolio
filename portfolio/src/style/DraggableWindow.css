@@ -1,0 +1,81 @@
+.draggable-window {
+  width: 360px;
+  height: 240px;
+  background: #f2f2f2;
+  border: 2px solid #2b4fa2;
+  border-radius: 4px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.150);
+  user-select: none; /* avoid text selection */
+  z-index: 999; /* keep above desktop icons */
+  overflow: hidden;
+}
+
+/* Titlebar is the draggable area */
+.window-header {
+  height: 36px;
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: grab;
+  color: white;
+  font-weight: 600;
+  background: linear-gradient(
+    to bottom,
+    var(--bluehighlight) 0%,
+    var(--bluehighlight) 8%,
+    var(--blue) 25%,
+    var(--blue) 100%
+  );
+}
+
+/* show grabbing cursor while dragging */
+.window-header:active {
+  cursor: grabbing;
+}
+
+.window-icon-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.title-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.window-icon {
+  width: 20px;
+  height: auto;
+}
+
+.window-action-buttons {
+  display: flex;
+  gap: 3px;
+  margin-top: 5px;
+}
+
+.window-action-buttons img {
+  width: 25px;
+  height: auto;
+}
+
+.close-btn,
+.minimize-btn,
+.maximize-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+/* window body */
+.window-content {
+  padding: 12px;
+  height: calc(100% - 36px);
+  overflow: auto;
+  background: #fff;
+}

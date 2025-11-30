@@ -1,0 +1,141 @@
+.body-wrapper {
+  height: 95vh;
+  background: url('../wallpaper.jpg');
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* desktop icons */
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.icon:hover {
+  background: rgba(255, 255, 255, 0.093);
+  border-radius: 10px;
+}
+
+.icon img {
+  width: 48px;
+  height: 48px;
+}
+
+.icon p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+
+  text-shadow:
+    1px 1px 0 var(--textshadow),
+    -1px 1px 0 var(--textshadow),
+    1px -1px 0 var(--textshadow),
+    -1px -1px 0 var(--textshadow);
+}
+
+.bottom-icons {
+  grid-column: 1 / 1;
+  align-self: bottom;
+  display: grid;
+  grid-auto-rows: 100px;
+  gap: 10px;
+}
+
+/* footer stuff*/
+
+.footer-tab-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.start-btn {
+  background-color: #82B94A;
+  font-weight: 500;
+  font-style: italic;
+  height: 40px;
+  width: 125px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: none;
+  margin-right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+
+  padding-left: 10px;
+  cursor: pointer;
+
+  box-shadow:
+    inset 0px 6px 5px #C2E5A1,
+    inset 0px -4px 6px #47602d,
+
+    0px 2px 4px #47602d,
+    0px -1px 1px #47602d,
+    -1px 0px 1px #47602d,
+    1px 0px 1px #47602d;
+}
+
+.start-btn p {
+  font-weight: 600;
+  font-size: 24px;
+  font-style: italic;
+  color: white;
+}
+
+.start-btn img {
+  width: auto;
+  height: 30px;
+}
+
+.taskbar-tab {
+  background: linear-gradient(to bottom, var(--bluelight), var(--blue));
+  color: white;
+  border: 1px solid #2b4fa2;
+  border-radius: 10px;
+
+  height: 35px;
+  min-width: 200px;
+
+  padding: 2px 8px;
+  font-size: 12px;
+  text-align: left;
+  margin-left: 5px;
+
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.taskbar-tab:hover {
+  background: linear-gradient(to bottom, #85c1ff, #0a75d6);
+}
+
+.timer-tab {
+  margin-left: auto;
+  padding: 0 15px;
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  height: 40px;
+
+  background-color: #59a1ff;
+  border-left: 3px solid var(--blueline);
+  box-shadow: inset 0px 3px 3px var(--bluelight);
+
+  display: flex;
+  align-items: center;
+}
