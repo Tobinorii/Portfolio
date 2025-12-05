@@ -10,10 +10,13 @@ export default function DraggableWindow({
   visible = true,
   minimized = false,
   initialPos = { x: 100, y: 100 },
+  width = 100,         // default width
+  height = 300,        // default height
   onPosChange = () => { },
   onMinimize = () => { },
   onClose = () => { },
-  onFocus = () => { },   // 🔥 NEW
+  onFocus = () => { },
+  children,
 }) {
 
   const winRef = useRef(null);
@@ -110,6 +113,8 @@ export default function DraggableWindow({
         top: `${pos.y}px`,
         position: "fixed",
         zIndex: zIndex,
+        width: `${width}px`,
+        height: `${height}px`,
       }}
       onMouseDown={() => {
         bringToFront();
@@ -166,8 +171,9 @@ export default function DraggableWindow({
         </div>
       </div>
 
-      <div className="window-content">{/* content passed as children */}</div>
-      {/* children placed below so parent can display content via children */}
+      <div className="window-content">
+        {children}
+      </div>
     </div>
   );
 }

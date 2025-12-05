@@ -3,6 +3,10 @@ import DraggableWindow from "./components/DraggableWindow";
 import "./App.css";
 import "./index.css";
 
+import ProfilePicWindow from "./components/ProfilePicWindow";
+import AboutMeWindow from "./components/AboutMeWindow";
+
+
 export default function App() {
   // windows array: { id, title, visible, minimized, pos }
   const [windows, setWindows] = useState([]);
@@ -37,15 +41,14 @@ export default function App() {
     });
   };
 
-
   // toggle minimized (taskbar click)
-  const toggleMinimize = (title) => {
-    setWindows((prev) =>
-      prev.map((w) =>
-        w.title === title ? { ...w, minimized: !w.minimized, visible: !w.minimized ? w.visible : true } : w
-      )
-    );
-  };
+  // const toggleMinimize = (title) => {
+  //   setWindows((prev) =>
+  //     prev.map((w) =>
+  //       w.title === title ? { ...w, minimized: !w.minimized, visible: !w.minimized ? w.visible : true } : w
+  //     )
+  //   );
+  // };
 
   const closeWindow = (title) => {
     setWindows((prev) => prev.filter((w) => w.title !== title));
@@ -77,12 +80,14 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  const ICONS = {
-    myComputer: { title: "My Computer", icon: "/mycomputer.png" },
-    profilePic: { title: "Profile Pic", icon: "/imagelogo.png" },
-    portfolio: { title: "Portfolio", icon: "/internetexplorer.png" },
-    aboutMe: { title: "About Me", icon: "/notepad.png" },
-  };
+    function renderContent(win) {
+      switch (win.title) {
+        case "Profile Pic":
+          return <ProfilePicWindow />;
+        default:
+          return <div>No content</div>;
+      }
+  }
 
 
   return (
@@ -131,6 +136,8 @@ export default function App() {
             visible={win.visible}
             minimized={win.minimized}
             initialPos={win.pos}
+            width={100}
+            height={300}
             onPosChange={(newPos) => updateWindowPos(win.title, newPos)}
             onMinimize={() =>
               setWindows((prev) => prev.map((w) => (w.title === win.title ? { ...w, minimized: true } : w)))
@@ -144,14 +151,15 @@ export default function App() {
               );
             }}
           >
-            <div style={{ padding: 12 }}>
-              <p>Content for {win.title}</p>
-            </div>
+            {/* {renderContent(win)} */}
+            {win.title === "About Me" && <AboutMeWindow />}
+            {win.title === "Profile Pic" && <ProfilePicWindow />}
           </DraggableWindow>
         ))}
       </div>
 
-      {/* Footer / Start bar */}
+
+      {/* Footer */}
       <footer>
         <div className="footer-tab-buttons">
           <button className="start-btn">

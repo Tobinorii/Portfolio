@@ -1,13 +1,25 @@
 .draggable-window {
-  width: 360px;
-  height: 240px;
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 1000px;
+  max-height: 800px;
+
   background: #f2f2f2;
   border: 2px solid #2b4fa2;
   border-radius: 4px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.150);
-  user-select: none; /* avoid text selection */
-  z-index: 999; /* keep above desktop icons */
+  user-select: none;
+  z-index: 999;
   overflow: hidden;
+}
+
+/* window body */
+.window-content {
+  padding: 0;
+  height: calc(100% - 40px);
+  overflow: none;
+  border: 3px solid var(--blueline);
+  background: #fff;
 }
 
 /* Titlebar is the draggable area */
@@ -70,12 +82,4 @@
   cursor: pointer;
   margin: 0;
   padding: 0;
-}
-
-/* window body */
-.window-content {
-  padding: 12px;
-  height: calc(100% - 36px);
-  overflow: auto;
-  background: #fff;
 }
