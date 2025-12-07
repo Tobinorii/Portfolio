@@ -5,28 +5,28 @@ import "./index.css";
 
 import ProfilePicWindow from "./components/ProfilePicWindow";
 import AboutMeWindow from "./components/AboutMeWindow";
-
+import PortfolioWindow from "./components/PortfolioWindow";
 
 export default function App() {
-  // windows array: { id, title, visible, minimized, pos }
+  // windows array: { id, title, visible, minimized, pos, fullscreen, width, height }
   const [windows, setWindows] = useState([]);
 
   const defaultPos = { x: 100, y: 100 };
 
-  const openWindow = ({ title, icon }) => {
+  // accept fullscreen flag
+  const openWindow = ({ title, icon, width, height, fullscreen = false }) => {
     setWindows(prev => {
       const found = prev.find(w => w.title === title);
 
       if (found) {
-        // restore if minimized or hidden
+        // restore if minimized or hidden; also preserve or set fullscreen
         return prev.map(w =>
           w.title === title
-            ? { ...w, visible: true, minimized: false }
+            ? { ...w, visible: true, minimized: false, fullscreen: fullscreen || w.fullscreen }
             : w
         );
       }
 
-      // create new window
       return [
         ...prev,
         {
@@ -35,26 +35,20 @@ export default function App() {
           icon,
           visible: true,
           minimized: false,
-          pos: { ...defaultPos }
+          fullscreen: !!fullscreen,
+          width: width ?? 400,
+          height: height ?? 300,
+          pos: fullscreen ? { x: 0, y: 0 } : { ...defaultPos },
         }
       ];
     });
   };
 
-  // toggle minimized (taskbar click)
-  // const toggleMinimize = (title) => {
-  //   setWindows((prev) =>
-  //     prev.map((w) =>
-  //       w.title === title ? { ...w, minimized: !w.minimized, visible: !w.minimized ? w.visible : true } : w
-  //     )
-  //   );
-  // };
 
   const closeWindow = (title) => {
     setWindows((prev) => prev.filter((w) => w.title !== title));
   };
 
-  // update a window's position (called from DraggableWindow)
   const updateWindowPos = (title, newPos) => {
     setWindows((prev) => prev.map((w) => (w.title === title ? { ...w, pos: newPos } : w)));
   };
@@ -64,100 +58,106 @@ export default function App() {
   useEffect(() => {
     const updateClock = () => {
       const now = new Date();
-
-      // Format time as HH:MM AM/PM
       const formatted = now.toLocaleTimeString([], {
         hour: "2-digit",
         minute: "2-digit",
       });
-
       setTime(formatted);
     };
 
-    updateClock(); // set initial time immediately
+    updateClock();
     const interval = setInterval(updateClock, 1000);
-
     return () => clearInterval(interval);
   }, []);
-
-    function renderContent(win) {
-      switch (win.title) {
-        case "Profile Pic":
-          return <ProfilePicWindow />;
-        default:
-          return <div>No content</div>;
-      }
-  }
-
 
   return (
     <>
       <div className="body-wrapper">
-        <div className="icon" onClick={() => openWindow({
+        {/* <div className="icon" onClick={() => openWindow({
           title: "My Computer",
           icon: "/mycomputer.png"
         })}>
           <img src="/mycomputer.png" />
           <p>My Computer</p>
-        </div>
+        </div> */}
 
         <div className="icon" onClick={() => openWindow({
-          title: "Profile Pic",
-          icon: "/imagelogo.png"
+          title: "Browser",
+          icon: "/internetexplorer.png",
+          fullscreen: true
         })}>
-          <img src="/imagelogo.png" />
-          <p>Profile Pic</p>
+          <img src="/internetexplorer.png" />
+          <p>Browser</p>
         </div>
 
         <div className="bottom-icons">
-          <div className="icon" onClick={() => openWindow({
-            title: "Portfolio",
-            icon: "/internetexplorer.png"
-          })}>
-            <img src="/internetexplorer.png" />
-            <p>Portfolio</p>
-          </div>
-
-          <div className="icon" onClick={() => openWindow({
-            title: "About Me",
-            icon: "/notepad.png"
-          })}>
+          <div className="icon" onClick={() =>
+            openWindow({
+              title: "About Me",
+              icon: "/notepad.png",
+              width: 400,
+              height: 400
+            })
+          }>
             <img src="/notepad.png" />
             <p>About Me</p>
+          </div>
+
+          <div className="icon" onClick={() =>
+            openWindow({
+              title: "Profile Pic",
+              icon: "/imagelogo.png",
+              width: 250,
+              height: 365
+            })
+          }>
+            <img src="/imagelogo.png" />
+            <p>Profile Pic</p>
           </div>
         </div>
 
         {/* Render draggable windows */}
-        {windows.map((win) => (
-          <DraggableWindow
-            key={win.id}
-            title={win.title}
-            icon={win.icon}
-            visible={win.visible}
-            minimized={win.minimized}
-            initialPos={win.pos}
-            width={100}
-            height={300}
-            onPosChange={(newPos) => updateWindowPos(win.title, newPos)}
-            onMinimize={() =>
-              setWindows((prev) => prev.map((w) => (w.title === win.title ? { ...w, minimized: true } : w)))
-            }
-            onClose={() => closeWindow(win.title)}
-            onFocus={() => {
-              setWindows(prev =>
-                prev.map(w =>
-                  w.title === win.title ? { ...w, focused: Date.now() } : w
-                )
-              );
-            }}
-          >
-            {/* {renderContent(win)} */}
-            {win.title === "About Me" && <AboutMeWindow />}
-            {win.title === "Profile Pic" && <ProfilePicWindow />}
-          </DraggableWindow>
-        ))}
-      </div>
+        {windows.map((win) => {
+          // compute footer height (safe)
+          const footerEl = typeof document !== "undefined" ? document.querySelector("footer") : null;
+          const footerH = footerEl ? footerEl.getBoundingClientRect().height : 0;
 
+          const winWidth = win.fullscreen ? window.innerWidth : (win.width || 400);
+          const winHeight = win.fullscreen ? (window.innerHeight - footerH) : (win.height || 300);
+
+          // IMPORTANT: return the JSX from map
+          return (
+            <DraggableWindow
+              key={win.id}
+              title={win.title}
+              icon={win.icon}
+              visible={win.visible}
+              minimized={win.minimized}
+              initialPos={win.pos}
+              width={winWidth}
+              height={winHeight}
+              // optional: prevent dragging when fullscreen
+              draggable={!win.fullscreen}
+              onPosChange={(newPos) => updateWindowPos(win.title, newPos)}
+              onMinimize={() =>
+                setWindows((prev) => prev.map((w) => (w.title === win.title ? { ...w, minimized: true } : w)))
+              }
+              onClose={() => closeWindow(win.title)}
+              onFocus={() => {
+                setWindows(prev =>
+                  prev.map(w =>
+                    w.title === win.title ? { ...w, focused: Date.now() } : w
+                  )
+                );
+              }}
+            >
+              {win.title === "About Me" && <AboutMeWindow />}
+              {win.title === "Profile Pic" && <ProfilePicWindow />}
+              {win.title === "Browser" && <PortfolioWindow />}
+            </DraggableWindow>
+          );
+        })}
+      </div>
 
       {/* Footer */}
       <footer>
@@ -176,7 +176,6 @@ export default function App() {
                   prev.map(w => {
                     if (w.title !== win.title) return w;
 
-                    // 🔥 If minimized → restore + focus
                     if (w.minimized) {
                       return {
                         ...w,
@@ -186,7 +185,6 @@ export default function App() {
                       };
                     }
 
-                    // 🔥 If already open → just bring to front
                     return {
                       ...w,
                       visible: true,
@@ -203,7 +201,6 @@ export default function App() {
           <div className="timer-tab">
             <p>{time}</p>
           </div>
-
         </div>
       </footer>
     </>

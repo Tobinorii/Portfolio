@@ -1,6 +1,6 @@
 .body-wrapper {
   height: 95vh;
-  background: url('../wallpaper.jpg');
+  background: url('../tempwallpaper.jpg');
   background-size: cover;
 
   display: grid;
@@ -62,7 +62,7 @@
 }
 
 .start-btn {
-  background-color: #82B94A;
+  background-color: var(--pink);
   font-weight: 500;
   font-style: italic;
   height: 40px;
@@ -81,13 +81,13 @@
   cursor: pointer;
 
   box-shadow:
-    inset 0px 6px 5px #C2E5A1,
-    inset 0px -4px 6px #47602d,
+    inset 0px 6px 5px var(--pinkhighlight),
+    inset 0px -4px 6px var(--pinkline),
 
-    0px 2px 4px #47602d,
-    0px -1px 1px #47602d,
-    -1px 0px 1px #47602d,
-    1px 0px 1px #47602d;
+    0px 2px 4px var(--pinkline),
+    0px -1px 1px var(--pinkline),
+    -1px 0px 1px var(--pinkline),
+    1px 0px 1px var(--pinkline);
 }
 
 .start-btn p {
@@ -105,7 +105,7 @@
 .taskbar-tab {
   background: linear-gradient(to bottom, var(--bluelight), var(--blue));
   color: white;
-  border: 1px solid #2b4fa2;
+  border: 1px solid var(--blueline);
   border-radius: 10px;
 
   height: 35px;
@@ -117,11 +117,11 @@
   margin-left: 5px;
 
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.5s ease;
 }
 
 .taskbar-tab:hover {
-  background: linear-gradient(to bottom, #85c1ff, #0a75d6);
+  background: linear-gradient(to bottom, #604CFF, #9D82F7);
 }
 
 .timer-tab {
@@ -132,10 +132,68 @@
   color: white;
   height: 40px;
 
-  background-color: #59a1ff;
+  background-color: var(--bluelight);
   border-left: 3px solid var(--blueline);
-  box-shadow: inset 0px 3px 3px var(--bluelight);
+  box-shadow: inset 0px 3px 3px var(--bluehighlight);
 
   display: flex;
   align-items: center;
+}
+
+.window-content-area {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.window-content-area::-webkit-scrollbar {
+}
+
+.window-content-area ul{
+  list-style-type: none;
+  margin-top: 0;
+  padding-left: 15px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+}
+
+.window-content-area h3 {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.window-content-area p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+}
+
+
+/* window header */
+
+.window-header-menu {
+  background: var(--pinklight);
+  border-bottom: 1px solid var(--pinkline);
+  padding: 2px 6px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.menu-unlist {
+  cursor: default !important;
+  color: #C887A2 !important;
+}
+
+.menu-list li {
+  font-size: 13px;
+  cursor: pointer;
+  font-family: "Tahoma", sans-serif;
+  color: black;
 }

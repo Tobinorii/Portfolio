@@ -1,11 +1,37 @@
 :root {
-  --blue: #285EE6;
-  --blueline: #2056DD;
-  --bluehighlight: #80a4ff;
-  --bluelight: #b5cbff91;
+  --blue: #604CFF;
+  --blueline: #5641F7;
+  --bluelight: #9D82F7;
+  --bluehighlight: #D2AEFF;
+
+  --pink: #F8A8CD;
+  --pinkline: #d44c8b;
+  --pinklight: #F4CFE2;
+  --pinkhighlight: #FFD3E7;
 
   --textshadow: #1a3c74;
+}
 
+/*----*/
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-mono-roman {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jost-roman {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*----*/
@@ -27,10 +53,14 @@ footer {
   left: 0;
 }
 
-h1, h2, h3, h4, h5, h6, a {
-  font-family: "Oranienbaum", system-ui;
+h1 {
+  font-family: "Bebas Neue", sans-serif;
 }
 
-p {
+h3 {
+  font-family: "Roboto Mono", monospace;
+}
+
+p, h2, h4, h5, h6, a {
   font-family: "Comic Relief", system-ui;
 }

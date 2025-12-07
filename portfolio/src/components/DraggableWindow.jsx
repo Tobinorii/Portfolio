@@ -17,6 +17,7 @@ export default function DraggableWindow({
   onClose = () => { },
   onFocus = () => { },
   children,
+  // draggable = true,
 }) {
 
   const winRef = useRef(null);
@@ -47,6 +48,7 @@ export default function DraggableWindow({
   };
 
   const startDrag = (e) => {
+    // if (!draggable) return;
     bringToFront();
     e.preventDefault();
     const rect = winRef.current.getBoundingClientRect();
@@ -152,11 +154,9 @@ export default function DraggableWindow({
             <img src="/minimize.png" alt="Minimize" />
           </button>
 
-          <button className="maximize-btn">
+          {/* <button className="maximize-btn">
             <img src="/maximize.png" alt="Maximize" />
-          </button>
-
-
+          </button> */}
 
           {/* close */}
           <button

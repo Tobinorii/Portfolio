@@ -2,7 +2,7 @@
   min-width: 200px;
   min-height: 200px;
   max-width: 1000px;
-  max-height: 800px;
+  max-height: 95vh;
 
   background: #f2f2f2;
   border: 2px solid #2b4fa2;
@@ -24,7 +24,7 @@
 
 /* Titlebar is the draggable area */
 .window-header {
-  height: 36px;
+  height: 35px;
   display: flex;
   align-items: center !important;
   justify-content: space-between;
@@ -32,13 +32,8 @@
   cursor: grab;
   color: white;
   font-weight: 600;
-  background: linear-gradient(
-    to bottom,
-    var(--bluehighlight) 0%,
-    var(--bluehighlight) 8%,
-    var(--blue) 25%,
-    var(--blue) 100%
-  );
+  background-color: var(--blue);
+  box-shadow: inset 0px 5px 3px var(--bluelight);
 }
 
 /* show grabbing cursor while dragging */
