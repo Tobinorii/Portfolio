@@ -94,7 +94,7 @@ export default function PortfolioWindow() {
             </div>
           </div>
 
-          <ScrollFade delay={100}>
+          <ScrollFade delay={200}>
             <div className="programming-image-card">
               <img src="/Portfolio/portfolio-iskolair.png" className="programming-image-bg" />
               <div className="programming-image-overlay">
@@ -107,7 +107,7 @@ export default function PortfolioWindow() {
             </div>
           </ScrollFade>
 
-          <ScrollFade delay={200}>
+          <ScrollFade delay={300}>
             <div className="programming-image-card">
               <img src="/Portfolio/portfolio-porcie.png" className="programming-image-bg" />
               <div className="programming-image-overlay porcie">

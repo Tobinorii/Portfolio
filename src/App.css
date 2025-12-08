@@ -1,6 +1,6 @@
 .body-wrapper {
   height: 95vh;
-  background: url('../Portfolio/tempwallpaper.jpg');
+  background: url('/Portfolio/tempwallpaper.jpg');
   background-size: cover;
 
   display: grid;
@@ -146,6 +146,7 @@
 }
 
 .window-content-area::-webkit-scrollbar {
+  width: 0;
 }
 
 .window-content-area ul{
