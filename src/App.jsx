@@ -79,7 +79,8 @@ export default function App() {
 
   return (
     <>
-      <div className="body-wrapper" style={{ backgroundImage: `url(${Background})` }}>
+      {/* <div className="body-wrapper" style={{ backgroundImage: `url(${Background})` }}> */}
+      <div className="body-wrapper">
         {/* <div className="icon" onClick={() => openWindow({
           title: "My Computer",
           icon: "/mycomputer.png"
