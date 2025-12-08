@@ -7,7 +7,7 @@
 }
 
 .portfolio-area {
-  background: url('./portfoliobg.gif');
+  background: url('/Portfolio/portfoliobg.gif');
   background-size: cover;
 
   overflow-y: auto;
