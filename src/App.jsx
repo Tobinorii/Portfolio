@@ -7,7 +7,7 @@ import ProfilePicWindow from "./components/ProfilePicWindow";
 import AboutMeWindow from "./components/AboutMeWindow";
 import PortfolioWindow from "./components/PortfolioWindow";
 
-import Background from "/Portfolio/tempwallpaper.jpg";
+// import Background from "/Portfolio/tempwallpaper.jpg";
 
 export default function App() {
   // windows array: { id, title, visible, minimized, pos, fullscreen, width, height }
