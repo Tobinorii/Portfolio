@@ -41,21 +41,21 @@ export default function PortfolioWindow() {
       <div className="window-header-menu portfolio">
         <div className="back-forward-btn">
           <img
-            src="/Portfolio/back.png"
+            src="./back.png"
             onClick={() => handleTabClick("programming")}
           />
           <img
-            src="/Portfolio/forward.png"
+            src="./forward.png"
             onClick={() => handleTabClick("digitalart")}
           />
         </div>
 
         <div className="search-bar">
-          <img src="/Portfolio/browsericon.png" className="search-bar-btn" /> <p>http://MineSpace.com/blog/fortugaliza</p>
+          <img src="./browsericon.png" className="search-bar-btn" /> <p>http://MineSpace.com/blog/fortugaliza</p>
         </div>
 
-        <img src="/Portfolio/restart.png" className="search-bar-btn" />
-        <img src="/Portfolio/question.png" className="search-bar-btn" />
+        <img src="./restart.png" className="search-bar-btn" />
+        <img src="./question.png" className="search-bar-btn" />
       </div>
 
       <div className="browser-tab-wrapper">
@@ -63,19 +63,19 @@ export default function PortfolioWindow() {
           className={`browser-tab-btn ${activeTab === "programming" ? "active" : ""}`}
           onClick={() => handleTabClick("programming")}
         >
-          <img src="/Portfolio/browsericon.png" />Programming
+          <img src="./browsericon.png" />Programming
         </button>
 
         <button
           className={`browser-tab-btn ${activeTab === "digitalart" ? "active" : ""}`}
           onClick={() => handleTabClick("digitalart")}
         >
-          <img src="/Portfolio/browsericon.png" />Digital Art
+          <img src="./browsericon.png" />Digital Art
         </button>
       </div>
 
       <div className="portfolio-banner">
-        <img src="/Portfolio/minespace.png" />
+        <img src="./minespace.png" />
       </div>
 
       <div className="portfolio-area">
@@ -84,7 +84,7 @@ export default function PortfolioWindow() {
           <h1>PROGRAMMING PROJECTS</h1>
 
           <div className="programming-image-card noteably">
-            <img src="/Portfolio/portfolio-noteably.png" className="programming-image-bg" />
+            <img src="./portfolio-noteably.png" className="programming-image-bg" />
             <div className="programming-image-overlay">
               <h2 className="programming-image-title">NOTEably</h2>
               <p className="programming-image-caption">An adorable notes app that combines to-do lists, a customizable
@@ -96,7 +96,7 @@ export default function PortfolioWindow() {
 
           <ScrollFade delay={200}>
             <div className="programming-image-card">
-              <img src="/Portfolio/portfolio-iskolair.png" className="programming-image-bg" />
+              <img src="./portfolio-iskolair.png" className="programming-image-bg" />
               <div className="programming-image-overlay">
                 <h2 className="programming-image-title">IskoLAIR</h2>
                 <p className="programming-image-caption">iskoLAIR is an all-in-one platform for DOST scholars and staff,
@@ -109,7 +109,7 @@ export default function PortfolioWindow() {
 
           <ScrollFade delay={300}>
             <div className="programming-image-card">
-              <img src="/Portfolio/portfolio-porcie.png" className="programming-image-bg" />
+              <img src="./portfolio-porcie.png" className="programming-image-bg" />
               <div className="programming-image-overlay porcie">
                 <h2 className="programming-image-title">Porcie</h2>
                 <p className="programming-image-caption">Porcie is a pixel-style game where you wake up in a basement
@@ -165,16 +165,16 @@ export default function PortfolioWindow() {
           </div>
 
           <div className="digitalart-masonry">
-            <img src="/Portfolio/art1.png" />
-            <img src="/Portfolio/art2.png" />
+            <img src="./art1.png" />
+            <img src="./art2.png" />
 
-            <img src="/Portfolio/art11.png" />
-            <img src="/Portfolio/art5.png" />
-            <img src="/Portfolio/art8.png" />
+            <img src="./art11.png" />
+            <img src="./art5.png" />
+            <img src="./art8.png" />
 
-            <img src="/Portfolio/art10.png" />
-            <img src="/Portfolio/art13.png" />
-            <img src="/Portfolio/art9.png" />
+            <img src="./art10.png" />
+            <img src="./art13.png" />
+            <img src="./art9.png" />
           </div>
         </div>
 

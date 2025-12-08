@@ -88,10 +88,10 @@ export default function App() {
 
         <div className="icon" onClick={() => openWindow({
           title: "Browser",
-          icon: "/Portfolio/internetexplorer.png",
+          icon: "./internetexplorer.png",
           fullscreen: true
         })}>
-          <img src="/Portfolio/internetexplorer.png" />
+          <img src="./internetexplorer.png" />
           <p>Browser</p>
         </div>
 
@@ -99,24 +99,24 @@ export default function App() {
           <div className="icon" onClick={() =>
             openWindow({
               title: "About Me",
-              icon: "/Portfolio/notepad.png",
+              icon: "./notepad.png",
               width: 400,
               height: 400
             })
           }>
-            <img src="/Portfolio/notepad.png" />
+            <img src="./notepad.png" />
             <p>About Me</p>
           </div>
 
           <div className="icon" onClick={() =>
             openWindow({
               title: "Profile Pic",
-              icon: "/Portfolio/imagelogo.png",
+              icon: "./imagelogo.png",
               width: 250,
               height: 365
             })
           }>
-            <img src="/Portfolio/imagelogo.png" />
+            <img src="./imagelogo.png" />
             <p>Profile Pic</p>
           </div>
         </div>
@@ -164,7 +164,7 @@ export default function App() {
       <footer>
         <div className="footer-tab-buttons">
           <button className="start-btn">
-            <img src="/Portfolio/windowslogo.png" alt="Start" />
+            <img src="./windowslogo.png" alt="Start" />
             <p>start</p>
           </button>
 
