@@ -10,8 +10,8 @@ export default function DraggableWindow({
   visible = true,
   minimized = false,
   initialPos = { x: 100, y: 100 },
-  width = 100,         // default width
-  height = 300,        // default height
+  width = 100,
+  height = 300,
   onPosChange = () => { },
   onMinimize = () => { },
   onClose = () => { },
@@ -22,20 +22,16 @@ export default function DraggableWindow({
 
   const winRef = useRef(null);
 
-  // local position state (initialized from prop)
   const [pos, setPos] = useState(() => ({ ...initialPos }));
 
   const [dragging, setDragging] = useState(false);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 
-  // z-index state
   const [zIndex, setZIndex] = useState(() => {
     highestZ++;
     return highestZ;
   });
 
-  // If parent updates initialPos (e.g. when opening a closed window),
-  // update local pos (but avoid overwriting while dragging).
   useEffect(() => {
     if (!dragging) {
       setPos({ ...initialPos });
@@ -48,7 +44,6 @@ export default function DraggableWindow({
   };
 
   const startDrag = (e) => {
-    // if (!draggable) return;
     bringToFront();
     e.preventDefault();
     const rect = winRef.current.getBoundingClientRect();
@@ -56,7 +51,6 @@ export default function DraggableWindow({
     setDragging(true);
   };
 
-  // compute footer height if present
   const getFooterHeight = () => {
     const footer = document.querySelector("footer");
     return footer ? footer.getBoundingClientRect().height : 0;
@@ -100,10 +94,8 @@ export default function DraggableWindow({
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dragging, offset, pos]); // include pos so onPosChange uses latest
+  }, [dragging, offset, pos]);
 
-  // Do not render when not visible OR minimized
   if (!visible || minimized) return null;
 
   return (
@@ -158,7 +150,6 @@ export default function DraggableWindow({
             <img src="/maximize.png" alt="Maximize" />
           </button> */}
 
-          {/* close */}
           <button
             className="close-btn"
             onClick={(ev) => {

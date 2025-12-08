@@ -13,13 +13,11 @@ export default function App() {
 
   const defaultPos = { x: 100, y: 100 };
 
-  // accept fullscreen flag
   const openWindow = ({ title, icon, width, height, fullscreen = false }) => {
     setWindows(prev => {
       const found = prev.find(w => w.title === title);
 
       if (found) {
-        // restore if minimized or hidden; also preserve or set fullscreen
         return prev.map(w =>
           w.title === title
             ? { ...w, visible: true, minimized: false, fullscreen: fullscreen || w.fullscreen }
@@ -38,12 +36,19 @@ export default function App() {
           fullscreen: !!fullscreen,
           width: width ?? 400,
           height: height ?? 300,
-          pos: fullscreen ? { x: 0, y: 0 } : { ...defaultPos },
+          pos: fullscreen
+          ? { x: 0, y: 0 }
+          : getCenteredPos(width ?? 400, height ?? 300),
         }
       ];
     });
   };
 
+  const getCenteredPos = (width, height) => {
+    const x = (window.innerWidth - width) / 2;
+    const y = (window.innerHeight - height) / 2;
+    return { x, y };
+  };
 
   const closeWindow = (title) => {
     setWindows((prev) => prev.filter((w) => w.title !== title));
@@ -116,16 +121,13 @@ export default function App() {
           </div>
         </div>
 
-        {/* Render draggable windows */}
         {windows.map((win) => {
-          // compute footer height (safe)
           const footerEl = typeof document !== "undefined" ? document.querySelector("footer") : null;
           const footerH = footerEl ? footerEl.getBoundingClientRect().height : 0;
 
           const winWidth = win.fullscreen ? window.innerWidth : (win.width || 400);
           const winHeight = win.fullscreen ? (window.innerHeight - footerH) : (win.height || 300);
 
-          // IMPORTANT: return the JSX from map
           return (
             <DraggableWindow
               key={win.id}
@@ -136,7 +138,6 @@ export default function App() {
               initialPos={win.pos}
               width={winWidth}
               height={winHeight}
-              // optional: prevent dragging when fullscreen
               draggable={!win.fullscreen}
               onPosChange={(newPos) => updateWindowPos(win.title, newPos)}
               onMinimize={() =>
@@ -159,7 +160,7 @@ export default function App() {
         })}
       </div>
 
-      {/* Footer */}
+
       <footer>
         <div className="footer-tab-buttons">
           <button className="start-btn">

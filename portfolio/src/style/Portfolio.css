@@ -25,6 +25,24 @@ html {
   scroll-margin-top: 12px;
 }
 
+/* scroll fade */
+
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  filter: blur(5px);
+  transition: opacity 0.8s ease-out, 
+              transform 0.8s ease-out, 
+              filter 0.8s ease-out;
+}
+
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+
 
 /* portfolio shit */
 
@@ -171,13 +189,18 @@ html {
   border-radius: 0;
   cursor: pointer;
 
-  margin-bottom: 100px;
+  margin-bottom: 40vh;
+}
+
+.programming-image-card.noteably {
+  margin-top: 30px;
 }
 
 .programming-image-bg {
   width: 100%;
   display: block;
   transition: filter 0.4s ease, transform 0.4s ease;
+  cursor: default;
 }
 
 .programming-image-card:hover .programming-image-bg {
@@ -196,15 +219,16 @@ html {
   align-items: center;
 
   text-align: center;
+  cursor: default;
 
   opacity: 0;
-  transform: translateY(30px);
+  /* transform: translateY(30px); */
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .programming-image-title {
   color: white;
-  margin: 0 0 10px 0;
+  margin: 0;
   font-size: 1.5rem;
   font-weight: bold;
 
@@ -224,7 +248,8 @@ html {
 
 .programming-image-caption {
   color: white;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
+  width: 80%;
 }
 
 .programming-image-btn {
@@ -240,7 +265,11 @@ html {
 
 .programming-image-card:hover .programming-image-overlay {
   opacity: 1;
-  transform: translateY(-70px);
+  transform: translateY(-50px);
+}
+
+.programming-image-card:hover .programming-image-overlay.porcie {
+  transform: translateY(-90px);
 }
 
 /* Show caption + button */
@@ -261,9 +290,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: start;
-  gap: 50px;
-
-  padding: 10px;
+  gap: 40px;
 }
 
 .digitalart-blog {

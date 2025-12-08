@@ -22,7 +22,7 @@
   background: #fff;
 }
 
-/* Titlebar is the draggable area */
+/* draggable area */
 .window-header {
   height: 35px;
   display: flex;
@@ -36,7 +36,6 @@
   box-shadow: inset 0px 5px 3px var(--bluelight);
 }
 
-/* show grabbing cursor while dragging */
 .window-header:active {
   cursor: grabbing;
 }

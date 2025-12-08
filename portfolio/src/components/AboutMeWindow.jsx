@@ -15,18 +15,29 @@ export default function AboutMeWindow() {
           >
             File
           </li>
+
+          {/* TEMPORARY */}
+          <li
+            className={selectedTab === "about" ? "active" : ""}
+            onClick={() => setSelectedTab("about")}
+          >
+            About
+          </li>
+
           <li
             className={selectedTab === "skills" ? "active" : ""}
             onClick={() => setSelectedTab("skills")}
           >
             Skills
           </li>
+
           <li
             className={selectedTab === "contacts" ? "active" : ""}
             onClick={() => setSelectedTab("contacts")}
           >
             Contacts
-          </li>          <li className="menu-unlist">Edit</li>
+          </li>
+          <li className="menu-unlist">Edit</li>
           <li className="menu-unlist">View</li>
         </ul>
       </div>
@@ -46,6 +57,22 @@ export default function AboutMeWindow() {
               are some of the creative tools I enjoy using. Blending
               those with frontend development and UI/UX allows me to
               enjoy the work I do.</p>
+          </div>
+        )}
+
+        {/* TEMPORARY */}
+        {selectedTab === "about" && (
+          <div style={{padding: '0 15px'}}>
+            <h3>Introduction</h3>
+            {/* <p>Hi! I’m Laura Alexia Jane Fortugaliza, a BSIT student at
+              Cebu Institute of Technology – University with a love for
+              both art and code. JavaScript is my comfort zone, but I’ve
+              also gained experience with C, Java, PHP, and database
+              systems like Postgres and MySQL.</p>
+            <p>Digital art, graphic design, animation, and wireframing
+              are some of the creative tools I enjoy using. Blending
+              those with frontend development and UI/UX allows me to
+              enjoy the work I do.</p> */}
           </div>
         )}
 
