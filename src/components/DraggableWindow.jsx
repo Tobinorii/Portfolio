@@ -143,7 +143,7 @@ export default function DraggableWindow({
               onMinimize();
             }}
           >
-            <img src="/minimize.png" alt="Minimize" />
+            <img src="/Portfolio/minimize.png" alt="Minimize" />
           </button>
 
           {/* <button className="maximize-btn">
@@ -157,7 +157,7 @@ export default function DraggableWindow({
               onClose();
             }}
           >
-            <img src="/exit.png" alt="Exit" />
+            <img src="/Portfolio/exit.png" alt="Exit" />
           </button>
         </div>
       </div>
