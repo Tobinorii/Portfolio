@@ -1,15 +1,25 @@
 :root {
-  --blue: #604CFF;
+  /* --blue: #604CFF;
   --blueline: #5641F7;
   --bluelight: #9D82F7;
-  --bluehighlight: #D2AEFF;
+  --bluehighlight: #D2AEFF; */
 
-  --pink: #F8A8CD;
+  /* --pink: #F8A8CD;
   --pinkline: #d44c8b;
   --pinklight: #F4CFE2;
-  --pinkhighlight: #FFD3E7;
+  --pinkhighlight: #FFD3E7; */
 
   --textshadow: #1a3c74;
+
+  --blue: #285EE6;
+  --blueline: #2056DD;
+  --bluelight: #6591FF;
+  --bluehighlight: #6591FF;
+
+  --pink: #D8CFCA;
+  --pinkline: #AFAFAF;
+  --pinklight: #DBDBDB;
+  --pinkhighlight: #d1d1d1;
 }
 
 /*----*/

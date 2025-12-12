@@ -90,11 +90,16 @@ export default function PortfolioWindow() {
               <p className="programming-image-caption">An adorable notes app that combines to-do lists, a customizable
                 timer, a built-in calendar, and organized note management through
                 folders.</p>
-              <button className="programming-image-btn">Take me there</button>
+                <button
+                  className="programming-image-btn"
+                  onClick={() => window.open("https://github.com/MuttiaSelgas/IskoLAIR.git", "_blank")}
+                >
+                  Take me there
+                </button>
             </div>
           </div>
 
-          <ScrollFade delay={200}>
+          <ScrollFade>
             <div className="programming-image-card">
               <img src="/Portfolio/portfolio-iskolair.png" className="programming-image-bg" />
               <div className="programming-image-overlay">
@@ -102,12 +107,17 @@ export default function PortfolioWindow() {
                 <p className="programming-image-caption">iskoLAIR is an all-in-one platform for DOST scholars and staff,
                   designed to streamline progress tracking, assignment submissions,
                   announcements, and more.</p>
-                <button className="programming-image-btn">Take me there</button>
+                  <button
+                    className="programming-image-btn"
+                    onClick={() => window.open("https://github.com/MuttiaSelgas/IskoLAIR.git", "_blank")}
+                  >
+                    Take me there
+                  </button>
               </div>
             </div>
           </ScrollFade>
 
-          <ScrollFade delay={300}>
+          <ScrollFade delay={100}>
             <div className="programming-image-card">
               <img src="/Portfolio/portfolio-porcie.png" className="programming-image-bg" />
               <div className="programming-image-overlay porcie">

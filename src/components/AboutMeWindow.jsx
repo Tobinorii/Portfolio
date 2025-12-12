@@ -16,14 +16,6 @@ export default function AboutMeWindow() {
             File
           </li>
 
-          {/* TEMPORARY */}
-          <li
-            className={selectedTab === "about" ? "active" : ""}
-            onClick={() => setSelectedTab("about")}
-          >
-            About
-          </li>
-
           <li
             className={selectedTab === "skills" ? "active" : ""}
             onClick={() => setSelectedTab("skills")}
@@ -60,29 +52,13 @@ export default function AboutMeWindow() {
           </div>
         )}
 
-        {/* TEMPORARY */}
-        {selectedTab === "about" && (
-          <div style={{padding: '0 15px'}}>
-            <h3>Introduction</h3>
-            {/* <p>Hi! I’m Laura Alexia Jane Fortugaliza, a BSIT student at
-              Cebu Institute of Technology – University with a love for
-              both art and code. JavaScript is my comfort zone, but I’ve
-              also gained experience with C, Java, PHP, and database
-              systems like Postgres and MySQL.</p>
-            <p>Digital art, graphic design, animation, and wireframing
-              are some of the creative tools I enjoy using. Blending
-              those with frontend development and UI/UX allows me to
-              enjoy the work I do.</p> */}
-          </div>
-        )}
-
         {selectedTab === "skills" && (
           <div style={{padding: '0 15px'}}>
             <h3>Programming</h3>
             <ul>
               <li>C</li>
               <li>Java</li>
-              <li>Java Script</li>
+              <li>Javascript</li>
               <li>UI/UX</li>
               <li>Wireframing</li>
             </ul>
