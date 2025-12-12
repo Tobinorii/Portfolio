@@ -92,7 +92,7 @@ export default function PortfolioWindow() {
                 folders.</p>
                 <button
                   className="programming-image-btn"
-                  onClick={() => window.open("https://github.com/MuttiaSelgas/IskoLAIR.git", "_blank")}
+                  onClick={() => window.open("https://github.com/nyxxolotl/NOTEably.git", "_blank")}
                 >
                   Take me there
                 </button>
