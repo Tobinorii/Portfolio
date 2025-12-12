@@ -124,7 +124,7 @@ export default function PortfolioWindow() {
                 <h2 className="programming-image-title">Porcie</h2>
                 <p className="programming-image-caption">Porcie is a pixel-style game where you wake up in a basement
                   after a date with a seemingly cute girl.</p>
-                <button className="programming-image-btn">Take me there</button>
+                {/* <button className="programming-image-btn">Take me there</button> */}
               </div>
             </div>
           </ScrollFade>

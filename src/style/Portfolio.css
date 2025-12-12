@@ -270,7 +270,7 @@ html {
 }
 
 .programming-image-card:hover .programming-image-overlay.porcie {
-  transform: translateY(-90px);
+  transform: translateY(-100px); /* -90px */
 }
 
 /* Show caption + button */
