@@ -61,6 +61,8 @@ export default function PortfolioFrontend() {
                 development and UI/UX design of the application.
               </p>
               
+              <button className="frontend-btn glow-isko">Take Me There</button>
+
             </div>
 
             <div className="image-column frontend">
@@ -89,6 +91,9 @@ export default function PortfolioFrontend() {
                 folders. I handled the frontend, UI/UX design, and backend development
                 of the application.
               </p>
+
+              <button className="frontend-btn glow-note">Take Me There</button>
+
             </div>
 
             <div className="image-column frontend">
@@ -117,6 +122,9 @@ export default function PortfolioFrontend() {
                 girl... but things are not what they seem. I handled the UI,
                 character designs, game assets, and storyline of the game.
               </p>
+
+              <button className="frontend-btn glow-porc">Take Me There</button>
+
             </div>
 
             <div className="image-column frontend">

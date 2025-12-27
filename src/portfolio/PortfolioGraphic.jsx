@@ -1,6 +1,11 @@
 import { useRef, useState, useEffect } from "react";
 import ScrollBlur from "../components/ScrollBlur";
 
+import logocoffee from "../assets/graphics/graphics-logocoffee.png";
+import logocall from "../assets/graphics/graphics-logocal.png";
+import logonote from "../assets/graphics/graphics-logonote.png";
+import logoporc from "../assets/graphics/graphics-logoporc.png";
+
 export default function PortfolioGraphic() {
   const logoRef = useRef(null);
   const miscRef = useRef(null);
@@ -59,18 +64,18 @@ export default function PortfolioGraphic() {
 
             <div className="image-row logos">
               <div className="image-tile logos">
-                <img src="/Portfolio/public/portfolio/final/uiux/graphics-logocoffee.png" />
+                <img src={logocoffee} />
               </div>
 
               <div className="image-tile logos">
-                <img src="/Portfolio/public/portfolio/final/uiux/graphics-logocal.png" />
+                <img src={logocall} />
               </div>
               <div className="image-tile logos">
-                <img src="/Portfolio/uiux/graphics-logonote.png" />
+                <img src={logonote} />
               </div>
 
               <div className="image-tile logos">
-                <img src="/Portfolio/portfolio/final/uiux/graphics-logoporc.png" />
+                <img src={logoporc} />
               </div>
             </div>
           </section>
