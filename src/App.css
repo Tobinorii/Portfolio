@@ -1,7 +1,9 @@
 .body-wrapper {
   height: 95vh;
-  background: url('/Portfolio/wallpaper.jpg');
+  background: url('/Portfolio/wallpaper.png');
   background-size: cover;
+  background-position: center 70%;
+
 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
