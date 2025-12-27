@@ -59,19 +59,19 @@ export default function PortfolioGraphic() {
 
             <div className="image-row logos">
               <div className="image-tile logos">
-                <img src="src/assets/graphics/graphics-logocoffee.png" />
+                <img src="/Portfolio/final/graphics/graphics-logocoffee.png" />
               </div>
 
               <div className="image-tile logos">
-                <img src="src/assets/graphics/graphics-logocal.png" />
+                <img src="/Portfolio/final/graphics/graphics-logocal.png" />
               </div>
 
               <div className="image-tile logos">
-                <img src="src/assets/graphics/graphics-logonote.png" />
+                <img src="/Portfolio/final/graphics/graphics-logonote.png" />
               </div>
 
               <div className="image-tile logos">
-                <img src="src/assets/graphics/graphics-logoporc.png" />
+                <img src="/Portfolio/graphics-logoporc.png" />
               </div>
             </div>
           </section>
