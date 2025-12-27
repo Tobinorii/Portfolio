@@ -1,6 +1,19 @@
 import { useRef, useState, useEffect } from "react";
 import ScrollBlur from "../components/ScrollBlur";
 
+import isko1 from "../assets/frontend/portfolio-isko1.png";
+import isko2 from "../assets/frontend/portfolio-isko2.png";
+import isko3 from "../assets/frontend/portfolio-isko3.png";
+
+import note1 from "../assets/frontend/portfolio-note1.png";
+import note2 from "../assets/frontend/portfolio-note2.png";
+import note3 from "../assets/frontend/portfolio-note3.png";
+
+import porc1 from "../assets/frontend/portfolio-porcie.png";
+import porc2 from "../assets/frontend/portfolio-porcie2.png";
+import porc3 from "../assets/frontend/portfolio-porcie3.png";
+
+
 export default function PortfolioFrontend() {
   const iskolairRef = useRef(null);
   const noteablyRef = useRef(null);
@@ -60,20 +73,20 @@ export default function PortfolioFrontend() {
                 and other academic processes. I handled the scholar side of the frontend
                 development and UI/UX design of the application.
               </p>
-              
+
               <button className="frontend-btn glow-isko">Take Me There</button>
 
             </div>
 
             <div className="image-column frontend">
               <div className="image-tile frontend">
-                <img src="src/assets/frontend/portfolio-isko1.png" />
+                <img src={isko1} />
               </div>
               <div className="image-tile frontend">
-                <img src="src/assets/frontend/portfolio-isko2.png" />
+                <img src={isko2} />
               </div>
               <div className="image-tile frontend">
-                <img src="src/assets/frontend/portfolio-isko3.png" />
+                <img src={isko3} />
               </div>
             </div>
           </section>
@@ -98,14 +111,15 @@ export default function PortfolioFrontend() {
 
             <div className="image-column frontend">
               <div className="image-tile frontend">
-                <img src="src/assets/frontend/portfolio-note1.png" />
+                <img src={note1} />
               </div>
               <div className="image-tile frontend">
-                <img src="src/assets/frontend/portfolio-note2.png" />
+                <img src={note2} />
               </div>
               <div className="image-tile frontend">
-                <img src="src/assets/frontend/portfolio-note3.png" />
+                <img src={note3} />
               </div>
+
             </div>
 
           </section>
@@ -129,13 +143,13 @@ export default function PortfolioFrontend() {
 
             <div className="image-column frontend">
               <div className="image-tile frontend">
-                <img src="src/assets/frontend/portfolio-porcie.png" />
+                <img src={porc1} />
               </div>
               <div className="image-tile frontend">
-                <img src="src/assets/frontend/portfolio-porcie2.png" />
+                <img src={porc2} />
               </div>
               <div className="image-tile frontend">
-                <img src="src/assets/frontend/portfolio-porcie3.png" />
+                <img src={porc3} />
               </div>
             </div>
           </section>

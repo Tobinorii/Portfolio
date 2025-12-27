@@ -1,6 +1,26 @@
 import { useRef, useState, useEffect } from "react";
 import ScrollBlur from "../components/ScrollBlur";
 
+import draw1 from "../assets/drawing/drawing1.png";
+import draw2 from "../assets/drawing/drawing2.png";
+import draw3 from "../assets/drawing/drawing3.png";
+import draw4 from "../assets/drawing/drawing4.png";
+import draw5 from "../assets/drawing/drawing5.png";
+import draw6 from "../assets/drawing/drawing6.png";
+import draw7 from "../assets/drawing/drawing7.png";
+import draw8 from "../assets/drawing/drawing8.png";
+import draw9 from "../assets/drawing/drawing9.png";
+import draw10 from "../assets/drawing/drawing10.png";
+import draw11 from "../assets/drawing/drawing11.png";
+import draw12 from "../assets/drawing/drawing12.png";
+import draw13 from "../assets/drawing/drawing13.png";
+import draw14 from "../assets/drawing/drawing14.png";
+import draw15 from "../assets/drawing/drawing15.png";
+import draw16 from "../assets/drawing/drawing16.png";
+import draw17 from "../assets/drawing/drawing17.png";
+import draw18 from "../assets/drawing/drawing18.png";
+import draw19 from "../assets/drawing/drawing19.png";
+
 export default function PortfolioDrawing() {
   const headingRef = useRef(null);
   const contentRef = useRef(null);
@@ -53,25 +73,27 @@ export default function PortfolioDrawing() {
             </div>
 
             <div className="masonry-grid">
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing1.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing3.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing11.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing4.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing14.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing2.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing5.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing9.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing8.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing10.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing12.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing13.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing6.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing15.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing16.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing17.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing18.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing7.png" /></div>
-              <div className="masonry-drawing"><img src="src/assets/drawing/drawing19.png" /></div>
+              
+              <div className="masonry-drawing"><img src={draw1} /></div>
+              <div className="masonry-drawing"><img src={draw3} /></div>
+              <div className="masonry-drawing"><img src={draw11} /></div>
+              <div className="masonry-drawing"><img src={draw4} /></div>
+              <div className="masonry-drawing"><img src={draw14} /></div>
+              <div className="masonry-drawing"><img src={draw2} /></div>
+              <div className="masonry-drawing"><img src={draw5} /></div>
+              <div className="masonry-drawing"><img src={draw9} /></div>
+              <div className="masonry-drawing"><img src={draw8} /></div>
+              <div className="masonry-drawing"><img src={draw10} /></div>
+              <div className="masonry-drawing"><img src={draw12} /></div>
+              <div className="masonry-drawing"><img src={draw13} /></div>
+              <div className="masonry-drawing"><img src={draw6} /></div>
+              <div className="masonry-drawing"><img src={draw15} /></div>
+              <div className="masonry-drawing"><img src={draw16} /></div>
+              <div className="masonry-drawing"><img src={draw17} /></div>
+              <div className="masonry-drawing"><img src={draw18} /></div>
+              <div className="masonry-drawing"><img src={draw7} /></div>
+              <div className="masonry-drawing"><img src={draw19} /></div>
+
             </div>
 
           </section>

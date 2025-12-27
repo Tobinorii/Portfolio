@@ -1,6 +1,17 @@
 import { useRef, useState, useEffect } from "react";
 import ScrollBlur from "../components/ScrollBlur";
 
+import uiNoteably from "../assets/uiux/uiux-uinoteably1.png";
+import uiIskolair from "../assets/uiux/uiux-uiiskolaur.png";
+import uiHotel from "../assets/uiux/uiux-uihotel.png";
+import uiPorcie from "../assets/uiux/uiux-uiporcie.png";
+
+import wfIsko1 from "../assets/uiux/uiux-wfiskolair1.png";
+import wfIsko2 from "../assets/uiux/uiux-wfiskolair2.png";
+
+import protoNexi from "../assets/uiux/uiux-prtynexi.png";
+
+
 export default function PortfolioUiUx() {
   const uiRef = useRef(null);
   const wireframeRef = useRef(null);
@@ -60,17 +71,19 @@ export default function PortfolioUiUx() {
 
             <div className="masonry-ui">
               <div className="image-tile">
-                <img src="src/assets/uiux/uiux-uinoteably1.png" alt="UI noteably" />
-              </div>
-              <div className="image-tile">
-                <img src="src/assets/uiux/uiux-uiiskolaur.png" alt="UI iskolair" />
+                <img src={uiNoteably} alt="UI noteably" />
               </div>
 
               <div className="image-tile">
-                <img src="src/assets/uiux/uiux-uihotel.png" alt="UI inncebu" />
+                <img src={uiIskolair} alt="UI iskolair" />
               </div>
+
               <div className="image-tile">
-                <img src="src/assets/uiux/uiux-uiporcie.png" alt="UI porcie" />
+                <img src={uiHotel} alt="UI inncebu" />
+              </div>
+
+              <div className="image-tile">
+                <img src={uiPorcie} alt="UI porcie" />
               </div>
             </div>
           </section>
@@ -88,10 +101,11 @@ export default function PortfolioUiUx() {
 
             <div className="image-row two">
               <div className="image-tile">
-                <img src="src/assets/uiux/uiux-wfiskolair1.png" alt="WF isko" />
+                <img src={wfIsko1} alt="WF isko" />
               </div>
+
               <div className="image-tile">
-                <img src="src/assets/uiux/uiux-wfiskolair2.png" alt="WF isko" />
+                <img src={wfIsko2} alt="WF isko" />
               </div>
             </div>
           </section>
@@ -108,9 +122,9 @@ export default function PortfolioUiUx() {
               </p>
             </div>
 
-          <div className="image-tile prototyping">
-            <img src="src/assets/uiux/uiux-prtynexi.png" alt="Prototyping" />
-          </div>
+            <div className="image-tile prototyping">
+              <img src={protoNexi} alt="Prototyping" />
+            </div>
           </section>
 
         </div>

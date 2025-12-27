@@ -6,6 +6,19 @@ import logocall from "../assets/graphics/graphics-logocal.png";
 import logonote from "../assets/graphics/graphics-logonote.png";
 import logoporc from "../assets/graphics/graphics-logoporc.png";
 
+import graphicsporc from "../assets/graphics/graphics-graphicsporc.png";
+import graphicswof from "../assets/graphics/graphics-graphicswof.png";
+import graphicsnote from "../assets/graphics/graphics-graphicsnote.png";
+
+import gif1 from "../assets/graphics/graphics-g1.gif";
+import gif2 from "../assets/graphics/graphics-g2.gif";
+import gif3 from "../assets/graphics/graphics-g3.gif";
+
+import poster1 from "../assets/graphics/graphics-poster1.png";
+import poster2 from "../assets/graphics/graphics-poster2.png";
+import poster3 from "../assets/graphics/graphics-poster3.png";
+
+
 export default function PortfolioGraphic() {
   const logoRef = useRef(null);
   const miscRef = useRef(null);
@@ -99,18 +112,18 @@ export default function PortfolioGraphic() {
 
             <div className="image-row misc">
               <div className="image-tile misc hover-swap">
-                <img className="static-img" src="src/assets/graphics/graphics-graphicsporc.png" />
-                <img className="hover-gif" src="src/assets/graphics/graphics-g1.gif" />
+                <img className="static-img" src={graphicsporc} />
+                <img className="hover-gif" src={gif1} />
               </div>
 
               <div className="image-tile misc hover-swap">
-                <img className="static-img" src="src/assets/graphics/graphics-graphicswof.png" />
-                <img className="hover-gif" src="src/assets/graphics/graphics-g2.gif" />
+                <img className="static-img" src={graphicswof} />
+                <img className="hover-gif" src={gif2} />
               </div>
 
               <div className="image-tile misc hover-swap">
-                <img className="static-img" src="src/assets/graphics/graphics-graphicsnote.png" />
-                <img className="hover-gif" src="src/assets/graphics/graphics-g3.gif" />
+                <img className="static-img" src={graphicsnote} />
+                <img className="hover-gif" src={gif3} />
               </div>
             </div>
 
@@ -127,15 +140,15 @@ export default function PortfolioGraphic() {
 
             <div className="image-row poster">
               <div className="image-tile poster">
-                <img src="src/assets/graphics/graphics-poster1.png" />
+                <img src={poster1} />
               </div>
 
               <div className="image-tile poster">
-                <img src="src/assets/graphics/graphics-poster2.png" />
+                <img src={poster2} />
               </div>
 
               <div className="image-tile poster">
-                <img src="src/assets/graphics/graphics-poster3.png" />
+                <img src={poster3} />
               </div>
             </div>
           </section>
