@@ -1,4 +1,6 @@
 import { useState } from "react";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function AboutMeWindow() {
 
@@ -54,11 +56,12 @@ export default function AboutMeWindow() {
 
         {selectedTab === "skills" && (
           <div style={{padding: '0 15px'}}>
-            <h3>Programming</h3>
+            <h3>Technical</h3>
             <ul>
-              <li>C</li>
+              {/* <li>C</li> */}
               <li>Java</li>
               <li>Javascript</li>
+              <li>Frontend Web Development</li>
               <li>UI/UX</li>
               <li>Wireframing</li>
             </ul>
@@ -67,7 +70,6 @@ export default function AboutMeWindow() {
               <li>Digital Arts</li>
               <li>Graphic Design</li>
               <li>Pixel Art</li>
-              <li>Animation</li>
             </ul>
           </div>
         )}
@@ -75,8 +77,17 @@ export default function AboutMeWindow() {
         {selectedTab === "contacts" && (
           <div style={{padding: '0 15px'}}>
             <h3>Contact Me</h3>
-            <p>Email: laura.fortugaliza@gmail.com</p>
-            <p>Number: +63 928 715 8037</p>
+            <p>laura.fortugaliza@gmail.com</p>
+            <p>+63 928 715 8037</p>
+            <p>------------------------------</p>
+            <div className="contact-icons">
+              <a href="https://github.com/Tobinorii" target="_blank" rel="noopener noreferrer" className="github-icon">
+                <GitHubIcon />
+              </a>
+              <a href="https://www.linkedin.com/in/laura-alexia-jane-fortugaliza-95aa27382/" target="_blank" rel="noopener noreferrer" className="linkedin-icon">
+                <LinkedInIcon />
+              </a>
+            </div>
           </div>
         )}
 

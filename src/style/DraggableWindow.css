@@ -1,7 +1,7 @@
 .draggable-window {
   min-width: 200px;
   min-height: 200px;
-  max-width: 1000px;
+  max-width: 65vw; /* width of window-fullscreen */
   max-height: 95vh;
 
   background: #f2f2f2;

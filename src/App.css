@@ -1,6 +1,6 @@
 .body-wrapper {
   height: 95vh;
-  background: url('/Portfolio/wp.jpg');
+  background: url('/Portfolio/wallpaper.jpg');
   background-size: cover;
 
   display: grid;
@@ -45,7 +45,7 @@
     -1px -1px 0 var(--textshadow);
 }
 
-.bottom-icons {
+.mid-icons {
   grid-column: 1 / 1;
   align-self: bottom;
   display: grid;
@@ -53,102 +53,14 @@
   gap: 10px;
 }
 
-/* footer stuff*/
-
-.footer-tab-buttons {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.bottom-icons {
+  grid-column: 1 / 0;
+  /* align-self: bottom; */
+  display: grid;
+  grid-auto-rows: 100px;
+  gap: 10px;
 }
 
-.start-btn {
-  background-color: #82B94A; /* VAR(--PINK) */
-  font-weight: 500;
-  font-style: italic;
-  height: 40px;
-  width: 125px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border: none;
-  margin-right: 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 5px;
-
-  padding-left: 10px;
-  cursor: pointer;
-
-  /* box-shadow:
-    inset 0px 6px 5px var(--pinkhighlight),
-    inset 0px -4px 6px var(--pinkline),
-
-    0px 2px 4px var(--pinkline),
-    0px -1px 1px var(--pinkline),
-    -1px 0px 1px var(--pinkline),
-    1px 0px 1px var(--pinkline); */
-
-  box-shadow:
-    inset 0px 6px 5px #C2E5A1,
-    inset 0px -4px 6px green,
-
-    0px 2px 4px green,
-    0px -1px 1px green,
-    -1px 0px 1px green,
-    1px 0px 1px green;
-
-}
-
-.start-btn p {
-  font-weight: 600;
-  font-size: 24px;
-  font-style: italic;
-  color: white;
-}
-
-.start-btn img {
-  width: auto;
-  height: 30px;
-}
-
-.taskbar-tab {
-  background: linear-gradient(to bottom, var(--bluelight), var(--blue));
-  color: white;
-  border: 1px solid var(--blueline);
-  border-radius: 10px;
-
-  height: 35px;
-  min-width: 200px;
-
-  padding: 2px 8px;
-  font-size: 12px;
-  text-align: left;
-  margin-left: 5px;
-
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-
-.taskbar-tab:hover {
-  background: linear-gradient(to bottom, #604CFF, #9D82F7);
-}
-
-.timer-tab {
-  margin-left: auto;
-  padding: 0 15px;
-  font-size: 12px;
-  font-weight: 400;
-  color: white;
-  height: 40px;
-
-  background-color: var(--bluelight);
-  border-left: 3px solid var(--blueline);
-  box-shadow: inset 0px 3px 3px var(--bluehighlight);
-
-  display: flex;
-  align-items: center;
-}
 
 .window-content-area {
   height: 100%;
@@ -174,7 +86,23 @@
 
 .window-content-area p {
   font-family: "Roboto Mono", monospace;
-  font-size: 13px;
+  font-size: 14px;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-icons svg {
+  font-size: xx-large;
+  color: black;
+  transition: color 0.2s ease;
+}
+
+.github-icon:hover svg,
+.linkedin-icon:hover svg {
+  color: var(--pink)
 }
 
 
@@ -199,7 +127,7 @@
 
 .menu-unlist {
   cursor: default !important;
-  color: gray !important; /* #C887A2 */
+  color: #C887A2 !important;
 }
 
 .menu-list li {
@@ -207,4 +135,38 @@
   cursor: pointer;
   font-family: "Tahoma", sans-serif;
   color: black;
+  transition: color 0.2s ease;
 }
+
+.menu-list li:hover {
+  color: var(--pinkline);
+}
+
+.menu-list li.active {
+  color: var(--blueline);
+}
+
+.resume-img {
+  object-fit: contain;
+  width: 420px;
+  height: auto;
+}
+
+/* .menu-list li.active {
+  background: linear-gradient(#d6e7ff, #9fbdf7);
+  border: 1px solid #4b70c8;
+  box-shadow: inset 0 1px 0 #ffffff,
+              inset 0 -1px 0 #6b94f2;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.menu-list li:hover {
+  background: linear-gradient(#f3f8ff, #c7ddff);
+  border: 1px solid #4b70c8;
+  box-shadow: inset 0 1px 0 #ffffff,
+              inset 0 -1px 0 #7ba3f7;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+VERY ACCURATE BUTTON :O */

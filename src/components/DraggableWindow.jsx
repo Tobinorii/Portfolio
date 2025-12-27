@@ -98,6 +98,18 @@ export default function DraggableWindow({
 
   if (!visible || minimized) return null;
 
+  const portfolioTitles = [
+    "UI/UX",
+    "Programming",
+    "Digital Art",
+    "Graphics",
+  ];
+
+  const displayTitle = portfolioTitles.includes(title)
+    ? "Browser - Portfolio"
+    : title;
+
+
   return (
     <div
       ref={winRef}
@@ -131,8 +143,8 @@ export default function DraggableWindow({
         }}
       >
       <div className="window-icon-title">
-        {icon && <img className="window-icon" src={icon} alt={title} />}
-        <p className="title-text">{title}</p>
+        {icon && <img className="window-icon" src={icon} alt={displayTitle} />}
+        <p className="title-text">{displayTitle}</p>
       </div>
 
         <div className="window-action-buttons">
