@@ -74,7 +74,12 @@ export default function PortfolioFrontend() {
                 development and UI/UX design of the application.
               </p>
 
-              <button className="frontend-btn glow-isko">Take Me There</button>
+              <button
+                className="frontend-btn glow-isko"
+                onClick={() => window.open("https://github.com/MuttiaSelgas/IskoLAIR.git", "_blank")}
+              >
+                Take Me There
+              </button>
 
             </div>
 
@@ -105,7 +110,12 @@ export default function PortfolioFrontend() {
                 of the application.
               </p>
 
-              <button className="frontend-btn glow-note">Take Me There</button>
+              <button
+                className="frontend-btn glow-note"
+                onClick={() => window.open("https://github.com/nyxxolotl/NOTEably.git", "_blank")}
+              >
+                Take Me There
+              </button>
 
             </div>
 
@@ -137,7 +147,12 @@ export default function PortfolioFrontend() {
                 character designs, game assets, and storyline of the game.
               </p>
 
-              <button className="frontend-btn glow-porc">Take Me There</button>
+              <button
+                className="frontend-btn glow-porc"
+                onClick={() => window.open("https://github.com/Tobinorii/ProjectPorcie.git", "_blank")}
+              >
+                Take Me There
+              </button>
 
             </div>
 
