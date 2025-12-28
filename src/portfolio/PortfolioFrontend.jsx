@@ -65,7 +65,7 @@ export default function PortfolioFrontend() {
             <div className="section-text frontend">
               <h2>IskoLAIR</h2>
 
-              <i>JavaScript, Vite, MySQL, Springboot, Java</i>
+              <i>JavaScript, React, Vite, MySQL, Springboot, Java</i>
 
               <p>
                 iskoLAIR is an all-in-one platform for DOST scholars and staff.
