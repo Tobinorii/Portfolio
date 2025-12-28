@@ -63,9 +63,10 @@ export default function PortfolioUiUx() {
             <div className="section-text uiux">
               <h2>UI Designs</h2>
               <p>
-                These are UI/UX projects I created in Figma for my school projects.
-                They include web, mobile, and game interfaces, focusing on clean
-                layouts, visual consistency, and user-friendly flows.
+                These are UI/UX projects I created in Figma for my school work.
+                The first three are web interfaces that focus on clean layouts,
+                visual consistency, and user-friendly flows, while the fourth is
+                a game interface designed for loading saved game progress.
               </p>
             </div>
 
